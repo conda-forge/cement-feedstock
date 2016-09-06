@@ -1,7 +1,7 @@
 {%set name = "cement" %}
-{%set version = "2.6.2" %}
+{%set version = "2.10.2" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "ba547b342c2e327f2509f9424971f7ae9dd61ec884cb62c80f45d88bdf4bd27b" %}
+{%set hash_val = "d50c5980bf3e2456e515178ba097d16e36be0fbcab7811a60589d22f45b64f55" %}
 
 package:
   name: {{ name }}
