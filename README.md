@@ -11,6 +11,18 @@ Summary: CLI Application Framework for Python
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cement-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cement-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/cement-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cement-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cement-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cement-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cement/badges/version.svg)](https://anaconda.org/conda-forge/cement)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cement/badges/downloads.svg)](https://anaconda.org/conda-forge/cement)
+
 Installing cement
 =================
 
@@ -66,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cement-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cement-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/cement-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cement-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cement-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cement-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cement/badges/version.svg)](https://anaconda.org/conda-forge/cement)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cement/badges/downloads.svg)](https://anaconda.org/conda-forge/cement)
 
 
 Updating cement-feedstock
