@@ -1,26 +1,27 @@
-{%set name = "cement" %}
-{%set version = "2.10.2" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "d50c5980bf3e2456e515178ba097d16e36be0fbcab7811a60589d22f45b64f55" %}
+{% set name = "cement" %}
+{% set version = "2.10.4" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "32f3a5239e6a9802f9ec58f256e32d124db1032506e90202717983cf195ecffa" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash_val }}
 build:
   preserve_egg_dir: True
-
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
@@ -36,7 +37,7 @@ test:
 about:
   home: http://builtoncement.com
   license: BSD 3-Clause
-  # license_file: No MANIFEST included with build
+  license_file: LICENSE
   license_family: BSD
   summary: 'CLI Application Framework for Python'
   doc_url: http://builtoncement.com/2.6/
