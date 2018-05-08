@@ -1,8 +1,8 @@
 {% set name = "cement" %}
-{% set version = "2.10.4" %}
+{% set version = "2.10.12" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "32f3a5239e6a9802f9ec58f256e32d124db1032506e90202717983cf195ecffa" %}
+{% set hash_val = "58efb4eacd9ec977ce797a364a13851de6e42392bbde5287d44294f06c5a2f70" %}
 
 package:
   name: {{ name }}

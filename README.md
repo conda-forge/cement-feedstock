@@ -14,12 +14,15 @@ Summary: CLI Application Framework for Python
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/cement-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cement-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/cement-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/cement-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cement/badges/version.svg)](https://anaconda.org/conda-forge/cement)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cement/badges/downloads.svg)](https://anaconda.org/conda-forge/cement)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cement-green.svg)](https://anaconda.org/conda-forge/cement) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cement.svg)](https://anaconda.org/conda-forge/cement) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cement.svg)](https://anaconda.org/conda-forge/cement) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cement.svg)](https://anaconda.org/conda-forge/cement) |
 
 Installing cement
 =================
