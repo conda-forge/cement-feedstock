@@ -17,7 +17,6 @@ build:
   skip: True  # [py2k]
   preserve_egg_dir: True
   number: 0
-  noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - cement = cement.cli.main:main
