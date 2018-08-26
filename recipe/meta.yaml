@@ -14,6 +14,7 @@ source:
   {{ hash_type }}: {{ hash_val }}
   
 build:
+  skip: True  # [py2k]
   preserve_egg_dir: True
   number: 0
   noarch: python
