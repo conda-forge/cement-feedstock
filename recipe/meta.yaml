@@ -12,11 +12,15 @@ source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash_val }}
+  
 build:
   preserve_egg_dir: True
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  entry_points:
+    - cement = cement.cli.main:main
+  
 
 requirements:
   host:
@@ -29,9 +33,6 @@ requirements:
 test:
   imports:
     - cement
-    - cement.core
-    - cement.ext
-    - cement.utils
     - examples
 
 about:
