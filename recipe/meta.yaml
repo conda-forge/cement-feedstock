@@ -1,8 +1,7 @@
 {% set name = "cement" %}
-{% set version = "3.0.2" %}
+{% set version = "3.0.4" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "8c692493c9d97b07e4a2c0770223fa5ee12a3110cfcb246d7d26fffe22edd22e" %}
+{% set hash_val = "10a8459dc9fc31d6c038ede24a9081c5c3bd5fcd75b071e01baf281f81c9eace" %}
 
 package:
   name: {{ name }}
@@ -11,16 +10,16 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
-  
+  sha256: {{ hash_val }}
+
 build:
-  skip: True  # [py2k]
-  preserve_egg_dir: True
-  number: 1000
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  skip: true  # [py2k]
+  preserve_egg_dir: true
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - cement = cement.cli.main:main
-  
+
 
 requirements:
   host:
@@ -39,7 +38,7 @@ about:
   license: BSD 3-Clause
   license_file: LICENSE
   license_family: BSD
-  summary: 'CLI Application Framework for Python'
+  summary: CLI Application Framework for Python
   doc_url: http://builtoncement.com/2.6/
   dev_url: https://github.com/datafolklabs/cement
 
