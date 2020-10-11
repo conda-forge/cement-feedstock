@@ -1,7 +1,6 @@
 {% set name = "cement" %}
 {% set version = "3.0.2" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
 {% set hash_val = "8c692493c9d97b07e4a2c0770223fa5ee12a3110cfcb246d7d26fffe22edd22e" %}
 
 package:
@@ -11,12 +10,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  sha256: {{ hash_val }}
   
 build:
   skip: True  # [py2k]
   preserve_egg_dir: True
-  number: 1000
+  number: 1001
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - cement = cement.cli.main:main
