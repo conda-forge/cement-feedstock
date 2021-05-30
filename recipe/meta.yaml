@@ -13,9 +13,8 @@ source:
   sha256: {{ hash_val }}
   
 build:
-  skip: True  # [py2k]
   preserve_egg_dir: True
-  number: 1001
+  number: 1002
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - cement = cement.cli.main:main
@@ -45,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - jan-janssen
