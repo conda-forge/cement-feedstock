@@ -1,5 +1,5 @@
 {% set name = "cement" %}
-{% set version = "3.0.4" %}
+{% set version = "3.0.6" %}
 
 package:
   name: {{ name }}
@@ -7,15 +7,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 10a8459dc9fc31d6c038ede24a9081c5c3bd5fcd75b071e01baf281f81c9eace
-  
+  sha256: fccec41eab3f15a03445b1ce24c8a7e106d4d5520f6507a7145698ce68923d31
+
 build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - cement = cement.cli.main:main
-  
+
 
 requirements:
   host:
@@ -30,7 +30,7 @@ test:
     - cement
   commands:
     - pip check
-  requires: 
+  requires:
     - pip
 
 about:
@@ -38,7 +38,7 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
-  summary: 'CLI Application Framework for Python'
+  summary: CLI Application Framework for Python
   doc_url: http://builtoncement.com/2.6/
   dev_url: https://github.com/datafolklabs/cement
 
