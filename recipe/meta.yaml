@@ -1,5 +1,5 @@
 {% set name = "cement" %}
-{% set version = "3.0.8" %}
+{% set version = "3.0.10" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ad11a694665e2ad28457c560494f4f8c36a25fc58e500d608a9d91e04e1d3093
+  sha256: 73d1015ebf9b8df13e6bc987edf0d4be3f1c8b4438921eea8d66cbb5504aee15
 
 build:
   number: 0
