@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9c4a7c6c644edb06d0a9d4fe246c9be06b0ba713a283e9288a6c4676c3e0c15b
 
 build:
@@ -21,6 +21,7 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - pdm
 
   run:
     - python >=3.6
