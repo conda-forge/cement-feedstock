@@ -10,7 +10,7 @@ source:
   sha256: 9c4a7c6c644edb06d0a9d4fe246c9be06b0ba713a283e9288a6c4676c3e0c15b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -19,13 +19,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - pdm
     - pdm-backend 
 
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://builtoncement.com
