@@ -1,5 +1,5 @@
 {% set name = "cement" %}
-{% set version = "3.0.12" %}
+{% set version = "3.0.14" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9c4a7c6c644edb06d0a9d4fe246c9be06b0ba713a283e9288a6c4676c3e0c15b
+  sha256: 0a8efc10646bd9a68d5cc5d2b69cfa0d9b3c186ce5d268497e3bbfc823dcb525
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -22,7 +22,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - pdm
-    - pdm-backend 
+    - pdm-backend
 
   run:
     - python >={{ python_min }}
