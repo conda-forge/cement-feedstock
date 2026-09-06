@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: cement
+  version: "3.0.16"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 7b56202c3c254dcf64aacdb6b3275a8fe08f50aac8a6c082d30d7860d490378e
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - cement = cement.cli.main:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - pdm
+    - pdm-backend
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - cement
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: CLI Application Framework for Python
+  homepage: http://builtoncement.com
+  repository: https://github.com/datafolklabs/cement
+  documentation: http://builtoncement.com/2.6/
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
+    - jan-janssen
